@@ -1,4 +1,4 @@
-import "./NavigationBar.css";
+import "./Header.css";
 
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -7,7 +7,7 @@ const NavigationBar = () => {
   return (
     <div className="mynavigation-bar">
       <NavLink className="my-link item" to="/">
-        <img src={require("../images/logo.png")} />
+        <img src={require("../images/logo.png")} alt="logo" />
       </NavLink>
       <div class="ui inverted secondary pointing menu my-menu">
         <div class="right menu">
@@ -22,9 +22,6 @@ const NavigationBar = () => {
           </NavLink>
         </div>
       </div>
-      <NavLink className="my-link" to="/">
-        <img src={require("../images/logo.png")} />
-      </NavLink>
     </div>
   );
 };

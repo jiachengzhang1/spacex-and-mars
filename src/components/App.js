@@ -1,7 +1,7 @@
 import React from "react";
 import Missions from "./Missions";
 import { BrowserRouter, Route } from "react-router-dom";
-import NavigationBar from "./NavigationBar";
+import Header from "./Header";
 import Mars from "./Mars";
 import About from "./About";
 
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="container">
       <BrowserRouter>
-        <NavigationBar />
+        <Header />
         <Route exact path="/">
           <Missions />
         </Route>
