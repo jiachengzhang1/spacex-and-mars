@@ -5,13 +5,13 @@ import { Navbar, Nav } from "react-bootstrap";
 
 const NavigationBar = () => {
   return (
-    <div className="navigation-bar">
+    <div className="mynavigation-bar">
       <Navbar
-        className="nav-bar"
+        className="mynav-bar nav-bar"
         fixed="top"
         collapseOnSelect
         expand="xl"
-        // variant="dark"
+        variant="dark"
       >
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -22,11 +22,11 @@ const NavigationBar = () => {
               alt=""
             ></img>
           </NavLink>
-          <Nav className="nav m-auto">
-            <NavLink exact className="nav-link" to="/">
+          <Nav className="mynav nav m-auto">
+            <NavLink exact className="mynav-link nav-link" to="/">
               SpaceX Missions
             </NavLink>
-            <NavLink exact className="nav-link" to="/mars">
+            <NavLink exact className="mynav-link nav-link" to="/mars">
               Mars
             </NavLink>
             {/* <NavLink exact className="nav-link" to="/rockets">
@@ -35,7 +35,7 @@ const NavigationBar = () => {
             <NavLink exact className="nav-link" to="/spaceships">
               Spaceships
             </NavLink> */}
-            <NavLink exact className="nav-link" to="/about">
+            <NavLink exact className="mynav-link nav-link" to="/about">
               About
             </NavLink>
           </Nav>
