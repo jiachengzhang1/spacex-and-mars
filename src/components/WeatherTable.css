@@ -1,0 +1,15 @@
+.weather-table {
+  margin-top: 20px;
+}
+
+.weather-table th {
+  height: 50px;
+}
+
+.weather-table table {
+  width: 100%;
+}
+
+.child-table table {
+  border: black;
+}

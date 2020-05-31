@@ -1,0 +1,17 @@
+.next-upcoming-mission {
+  margin: auto;
+  width: 60%;
+}
+
+.next-upcoming-mission h1 {
+  text-align: center;
+}
+
+.next-upcoming-mission-content {
+  background-color: transparent;
+  border: none;
+}
+
+.next-upcoming-mission-content h6 {
+  margin-bottom: 40px;
+}

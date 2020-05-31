@@ -1,0 +1,70 @@
+.mars {
+  width: 100%;
+  margin-top: 130px;
+  /* position: relative; */
+}
+
+.mars hr {
+  border-color: rgba(255, 255, 255, 0.534);
+}
+
+.mars-temp {
+  height: 60vh;
+}
+
+.weather-card {
+  border-radius: 5px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(10, 2, 43, 0.1)),
+    url("../images/weather.jpg");
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  height: 70vh;
+  background-position: center;
+  border: solid;
+  border-radius: 5px;
+  /* z-index: 1; */
+  border-color: rgba(0, 0, 0, 0.842);
+  box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.459);
+}
+
+.latest-weather {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 12vh;
+  margin-bottom: 20vh;
+}
+
+.latest-weather h2,
+h3,
+h4 {
+  font-size: 2vw;
+  text-shadow: 2px 1px black;
+}
+
+.latest-weather-content {
+  width: 25vw;
+  margin: auto;
+  margin-top: 6.5vh;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.384);
+  background: rgba(0, 0, 0, 0.384);
+  padding: 1vh;
+  font-size: 1.5vw;
+  /* height: 40vh; */
+}
+
+.temp p {
+  margin: auto;
+}
+
+.daily-weather-table {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.daily-weather-table h2 a {
+  text-decoration: none;
+}

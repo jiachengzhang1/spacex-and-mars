@@ -1,0 +1,20 @@
+.about {
+  margin-top: 130px;
+  text-align: center;
+}
+
+.about h1 {
+  margin-bottom: 100px;
+}
+
+.about a {
+  text-decoration: none;
+  color: rgb(81, 81, 211);
+}
+
+.about p {
+  font-size: 20px;
+  margin: auto;
+  width: 60vw;
+  margin-top: 25px;
+}
