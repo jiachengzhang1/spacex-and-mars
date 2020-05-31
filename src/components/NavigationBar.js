@@ -11,7 +11,7 @@ const NavigationBar = () => {
         fixed="top"
         collapseOnSelect
         expand="xl"
-        variant="dark"
+        // variant="dark"
       >
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
