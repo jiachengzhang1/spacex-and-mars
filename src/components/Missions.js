@@ -84,7 +84,7 @@ export default class Missions extends React.Component {
       <div className="landing-page" style={{ marginTop: "130px" }}>
         <Quote />
         {this.getNextUpcomingMission()}
-        <div className="after-next-launches mt-5 row justify-content-center">
+        <div className="after-next-launches mt-5">
           <h1 style={{ textAlign: "center" }}>Future Missions</h1>
           {this.getUpcomingMissionTable()}
         </div>

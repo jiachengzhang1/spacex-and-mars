@@ -24,10 +24,12 @@ const Table = ({ headers, rows, body = null, bootstrap = true, className }) => {
   if (bootstrap) {
     return (
       <TB className={className} responsive="sm" bordered={false}>
-        <thead>
+        <thead style={{ color: "white" }}>
           <tr>{constructHeaderHTML(headers)}</tr>
         </thead>
-        <tbody>{constructBodyHTML(rows, body)}</tbody>
+        <tbody style={{ color: "white" }}>
+          {constructBodyHTML(rows, body)}
+        </tbody>
       </TB>
     );
   }

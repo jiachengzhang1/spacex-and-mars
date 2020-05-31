@@ -1,6 +1,6 @@
 .header-nav-bar {
-  background-color: #000000;
-  opacity: 93%;
+  background-color: #000000 !important;
+  opacity: 0.9;
   margin-left: auto;
 }
 .header-nav-bar img {
@@ -12,7 +12,7 @@
   margin-left: auto;
 }
 
-.header-nav-link {
+.nav-link {
   margin-left: 30px;
   margin-right: 20px;
   padding: 25px;
