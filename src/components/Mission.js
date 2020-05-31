@@ -29,7 +29,6 @@ const Mission = ({ mission }) => {
         as={Card.Header}
         eventKey={flight_number}
         style={{
-          backgroundColor: "transparent",
           border: "none",
           cursor: "pointer",
         }}
