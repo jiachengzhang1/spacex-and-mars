@@ -1,32 +1,46 @@
 import "./Header.css";
-
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <div className="mynavigation-bar" style={{ backgroundColor: "#000000" }}>
-      <NavLink className="my-link item" to="/">
-        <img src={require("../images/logo.png")} alt="logo" />
-      </NavLink>
-      <div className="ui inverted secondary pointing menu my-menu">
-        <div className="right menu">
-          <NavLink
-            style={{ color: "white !important" }}
-            exact
-            className="my-link item"
-            to="/"
-          >
-            SpaceX Missions
+    <div className="header-navigation-bar">
+      <Navbar
+        className="header-nav-bar"
+        fixed="top"
+        // collapseOnSelect
+        expand="xl"
+        variant="dark"
+      >
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <NavLink to="/">
+            <img
+              src={require("../images/logo.png")}
+              style={{ height: "70px" }}
+              alt=""
+            ></img>
           </NavLink>
-          <NavLink className="my-link item" to="/mars">
-            Mars
-          </NavLink>
-          <NavLink className="my-link item" to="/about">
-            About
-          </NavLink>
-        </div>
-      </div>
+          <Nav className="header-nav m-auto">
+            <NavLink exact className="header-nav-link" to="/">
+              SpaceX Missions
+            </NavLink>
+            <NavLink exact className="header-nav-link" to="/mars">
+              Mars
+            </NavLink>
+            {/* <NavLink exact className="nav-link" to="/rockets">
+              Rockets
+            </NavLink>
+            <NavLink exact className="nav-link" to="/spaceships">
+              Spaceships
+            </NavLink> */}
+            <NavLink exact className="header-nav-link" to="/about">
+              About
+            </NavLink>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
   );
 };

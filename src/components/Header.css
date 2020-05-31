@@ -1,35 +1,19 @@
-.mynavigation-bar {
-  top: 0;
-  left: 0;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+.header-nav-bar {
+  background-color: #000000;
   opacity: 93%;
-  height: 80px;
-  width: 100%;
-  z-index: 1;
+  margin-left: auto;
 }
-
-.my-menu {
-  border: none !important;
-  position: absolute;
-  right: 12vw;
+.header-nav-bar img {
+  align-self: flex-start;
+  margin-left: 100px;
 }
-
-.mynavigation-bar img {
-  top: 0.5vh;
-  position: fixed;
-  left: 15vw;
-  height: 70px;
-}
-
-.my-link {
-  /* position: absolute !important; */
-  margin-bottom: 20px !important;
+.header-nav {
   font-size: 20px;
-  float: right !important;
-  margin-right: 3vw !important;
+  margin-left: auto;
+}
+
+.header-nav-link {
+  margin-left: 30px;
+  margin-right: 20px;
+  padding: 25px;
 }
