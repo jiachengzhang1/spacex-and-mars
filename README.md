@@ -42,3 +42,11 @@ Step 1, 2 then run `npm start`, the application should be served on localhost po
 
 I'm open for any feedbacks or concerns!😃 Thanks you🙏 And Go SpaceX🚀🚀
 
+## References
+* SpaceX mission data: https://github.com/r-spacex/SpaceX-API
+* Mars weather data: https://api.nasa.gov/
+* Top left logo: https://cdn.hswstatic.com/gif/mars-a1.jpg and https://dribbble.com/shots/5157282-My-Spacex-Logo-Version
+* Mars page top image: https://www.nasa.gov/sites/default/files/thumbnails/image/p3l4_search_apis_cor.png
+* Background image: https://www.citylightscinemas.com/dark-deep-space-4k-wallpaper-2560x1440/
+
+
