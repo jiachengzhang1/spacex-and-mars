@@ -40,5 +40,5 @@ Step 1, 2 then run `npm start`, the application should be served on localhost po
 * Improve UI for mobile version
 * Adding SpaceX rocket and spaceship pages
 
-I'm open for any feedbacks!😃 And Go SpaceX🚀🚀
+I'm open for any feedbacks or concerns!😃 Thanks you🙏 And Go SpaceX🚀🚀
 
