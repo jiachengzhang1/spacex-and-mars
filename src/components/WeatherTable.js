@@ -3,13 +3,15 @@ import React from "react";
 import Table from "./Table";
 
 const getBodyData = (key, weathers) => {
-  return weathers.sol_keys.reverse().map((sol) => {
-    if (key === "time") {
-      return [new Date(weathers[sol]["Last_UTC"]).toDateString(), sol];
-    }
-    const { av, mn, mx } = weathers[sol][key];
-    return [av, mn, mx];
-  });
+  return weathers.sol_keys
+    .map((sol) => {
+      if (key === "time") {
+        return [new Date(weathers[sol]["Last_UTC"]).toDateString(), sol];
+      }
+      const { av, mn, mx } = weathers[sol][key];
+      return [av, mn, mx];
+    })
+    .reverse();
 };
 
 const constructBody = (headers, weathers) => {
