@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 import App from "./components/App";
-import reducers from "./reducers";
+import reducers from "./redux/reducers";
 
 const store = createStore(reducers, applyMiddleware(thunk));
 

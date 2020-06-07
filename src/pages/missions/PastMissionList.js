@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Accordion } from "react-bootstrap";
 
 import PastMission from "./PastMission";
-import { fetchPastMissions } from "../../actions";
+import { fetchPastMissions } from "../../redux/actions";
 import isWindowBottom from "../../utils/isWindowBottom";
 import { PAST_LIMIT } from "../../utils/constants";
 

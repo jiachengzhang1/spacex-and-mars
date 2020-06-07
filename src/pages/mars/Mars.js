@@ -8,7 +8,7 @@ import {
   MARS_WEATHER_LOCATION_LINK,
   NASA_INSIGHT_LINK,
 } from "../../utils/constants";
-import { fetchMarsWeather } from "../../actions";
+import { fetchMarsWeather } from "../../redux/actions";
 import ATag from "../../components/ATag";
 
 class Mars extends React.Component {

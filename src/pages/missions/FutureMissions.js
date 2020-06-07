@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import NextUpcomingMission from "./NextUpcomingMission";
-import { fetchFutureMissions } from "../../actions";
+import { fetchFutureMissions } from "../../redux/actions";
 import CountDown from "../../components/countdown";
 import Table from "../../components/Table";
 import getDate from "../../utils/getDate";

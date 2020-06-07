@@ -1,5 +1,5 @@
-import spaceX from "../apis/spaceX";
-import nasa from "../apis/nasa";
+import spaceX from "../../apis/spaceX";
+import nasa from "../../apis/nasa";
 
 export const fetchFutureMissions = (limit) => async (dispatch) => {
   const response = await spaceX.get("/launches/upcoming", {
