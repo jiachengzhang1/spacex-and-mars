@@ -1,6 +1,6 @@
 import React from "react";
 
-const CountDownNum = ({ num, text, textFontSize, numFontSize }) => {
+export default function CountdownNum({ num, text, textFontSize, numFontSize }) {
   return (
     <div
       className="count-down-num text-center m-auto"
@@ -14,6 +14,4 @@ const CountDownNum = ({ num, text, textFontSize, numFontSize }) => {
       </div>
     </div>
   );
-};
-
-export default CountDownNum;
+}

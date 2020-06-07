@@ -1,7 +1,7 @@
 import React from "react";
-import CountDownNum from "./CountDownNum";
+import CountdownNum from "./CountdownNum";
 
-export default class CountDown extends React.Component {
+export default class Countdown extends React.Component {
   state = { counter: 0 };
 
   componentDidMount() {
@@ -25,28 +25,28 @@ export default class CountDown extends React.Component {
         className="row justify-content-center"
         style={{ background: "transparent" }}
       >
-        <CountDownNum
+        <CountdownNum
           num={Math.floor(remain / (24 * 60 * 60 * 1000))}
           text="DAYS"
           textFontSize={this.props.textFontSize}
           numFontSize={this.props.numFontSize}
         />
         {this.props.divider ? ":" : ""}
-        <CountDownNum
+        <CountdownNum
           num={Math.floor((remain % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60))}
           text="HOURS"
           textFontSize={this.props.textFontSize}
           numFontSize={this.props.numFontSize}
         />
         {this.props.divider ? ":" : ""}
-        <CountDownNum
+        <CountdownNum
           num={Math.floor((remain % (60 * 60 * 1000)) / (1000 * 60))}
           text="MINUTES"
           textFontSize={this.props.textFontSize}
           numFontSize={this.props.numFontSize}
         />
         {this.props.divider ? ":" : ""}
-        <CountDownNum
+        <CountdownNum
           num={Math.floor((remain % (1000 * 60)) / 1000)}
           text="SECONDS"
           textFontSize={this.props.textFontSize}

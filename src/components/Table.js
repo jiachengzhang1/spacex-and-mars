@@ -9,18 +9,24 @@ const constructBodyHTML = (rows, body) => {
   if (body !== null) {
     return body;
   }
-  return rows.map((datas) => {
+  return rows.map((datas, i) => {
     return (
-      <tr>
-        {datas.map((data) => (
-          <td>{data}</td>
+      <tr key={i}>
+        {datas.map((data, i) => (
+          <td key={i}>{data}</td>
         ))}
       </tr>
     );
   });
 };
 
-const Table = ({ headers, rows, body = null, bootstrap = true, className }) => {
+export default function Table({
+  headers,
+  rows,
+  body = null,
+  bootstrap = true,
+  className,
+}) {
   if (bootstrap) {
     return (
       <TB className={className} responsive="sm" bordered={false}>
@@ -41,6 +47,6 @@ const Table = ({ headers, rows, body = null, bootstrap = true, className }) => {
       <tbody>{constructBodyHTML(rows, body)}</tbody>
     </table>
   );
-};
+}
 
-export default Table;
+//  Table;

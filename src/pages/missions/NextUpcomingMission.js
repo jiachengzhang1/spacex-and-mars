@@ -1,8 +1,8 @@
 import "./NextUpcomingMission.css";
 import React from "react";
-import CountDown from "./CountDown";
+import CountDown from "../../components/countdown";
 
-const NextUpcomingMission = ({ mission }) => {
+export default function NextUpcomingMission({ mission }) {
   const { launch_date_utc, mission_name, launch_site } = mission;
   const { site_name, site_name_long } = launch_site;
   return (
@@ -29,6 +29,4 @@ const NextUpcomingMission = ({ mission }) => {
       </div>
     </div>
   );
-};
-
-export default NextUpcomingMission;
+}

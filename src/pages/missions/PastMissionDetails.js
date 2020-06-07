@@ -1,7 +1,9 @@
 import "./PastMissionDetails.css";
 import React from "react";
 import PastMissionImages from "./PastMissionImages";
-import Table from "./Table";
+
+import Table from "../../components/Table";
+import ATag from "../../components/ATag";
 
 const constructTableBody = (payloads) => {
   return payloads.map(
@@ -91,7 +93,7 @@ const PastMissionDetails = ({
           </li>
           <li>
             <h5>Watch on YouTube</h5>
-            <a href={videoLink}>YouTube</a>
+            <ATag href={videoLink} text="YouTube" />
           </li>
         </ul>
       </div>

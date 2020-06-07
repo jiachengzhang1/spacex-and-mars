@@ -1,11 +1,12 @@
 import React from "react";
-import Missions from "./Missions";
 import { BrowserRouter, Route } from "react-router-dom";
-import Header from "./Header";
-import Mars from "./Mars";
-import About from "./About";
 
-const App = () => {
+import Header from "./Header";
+import Missions from "../pages/missions";
+import Mars from "../pages/mars";
+import About from "../pages/about";
+
+export default function App() {
   return (
     <div className="container">
       <BrowserRouter>
@@ -24,6 +25,4 @@ const App = () => {
       </BrowserRouter>
     </div>
   );
-};
-
-export default App;
+}

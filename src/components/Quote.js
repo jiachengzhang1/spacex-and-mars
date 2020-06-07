@@ -1,6 +1,6 @@
 import React from "react";
 
-const Quote = () => {
+export default function Quote() {
   return (
     <blockquote className="blockquote text-center">
       <p className="mb-2">
@@ -12,6 +12,4 @@ const Quote = () => {
       </footer>
     </blockquote>
   );
-};
-
-export default Quote;
+}

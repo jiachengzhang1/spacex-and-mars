@@ -1,8 +1,8 @@
 import "./WeatherTable.css";
 import React from "react";
-import Table from "./Table";
+import Table from "../../components/Table";
 
-const getBodyData = (key, weathers) => {
+function getBodyData(key, weathers) {
   return weathers.sol_keys
     .map((sol) => {
       if (key === "time") {
@@ -12,24 +12,28 @@ const getBodyData = (key, weathers) => {
       return [av, mn, mx];
     })
     .reverse();
-};
+}
 
-const constructBody = (headers, weathers) => {
-  return Object.keys(headers).map((key) => {
-    return (
-      <td>
-        <Table
-          headers={headers[key]}
-          rows={getBodyData(key, weathers)}
-          bootstrap={false}
-          className="child-table"
-        />
-      </td>
-    );
-  });
-};
+function constructBody(headers, weathers) {
+  return (
+    <tr>
+      {Object.keys(headers).map((key, i) => {
+        return (
+          <td key={i}>
+            <Table
+              headers={headers[key]}
+              rows={getBodyData(key, weathers)}
+              bootstrap={false}
+              className="child-table"
+            />
+          </td>
+        );
+      })}
+    </tr>
+  );
+}
 
-const WeatherTable = ({ weathers }) => {
+export default function WeatherTable({ weathers }) {
   const headers = {
     time: ["Date on Earth", "SOL"],
     AT: ["Average", "Min", "Max"],
@@ -44,6 +48,4 @@ const WeatherTable = ({ weathers }) => {
       />
     </div>
   );
-};
-
-export default WeatherTable;
+}

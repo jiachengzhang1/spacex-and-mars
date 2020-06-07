@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   state = { navExpanded: false };
 
   componentWillMount() {
@@ -29,59 +29,52 @@ class Header extends React.Component {
     this.setState({ navExpanded: false });
   };
 
+  constructNav(routes) {
+    return (
+      <Nav className="header-nav m-auto">
+        {routes.map(({ name, route }, i) => (
+          <NavLink
+            key={i}
+            onClick={this.closeNav}
+            exact
+            className="nav-link"
+            to={route}
+          >
+            {name}
+          </NavLink>
+        ))}
+      </Nav>
+    );
+  }
+
   render() {
     return (
-      <div ref={(node) => (this.node = node)} className="header-navigation-bar">
-        <Navbar
-          className="header-nav-bar"
-          fixed="top"
-          collapseOnSelect
-          expand="md"
-          variant="dark"
-          onToggle={this.setNavExpanded}
-          expanded={this.state.navExpanded}
-        >
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <NavLink to="/">
-              <img
-                src={require("../images/logo.png")}
-                style={{ height: "70px" }}
-                alt="logo"
-              ></img>
-            </NavLink>
-            <Nav className="header-nav m-auto">
-              <NavLink
-                onClick={this.closeNav}
-                exact
-                className="nav-link"
-                dataToggle="collapse"
-                to="/"
-              >
-                SpaceX Missions
-              </NavLink>
-              <NavLink
-                onClick={this.closeNav}
-                exact
-                className="nav-link"
-                to="/mars"
-              >
-                Mars
-              </NavLink>
-              <NavLink
-                onClick={this.closeNav}
-                exact
-                className="nav-link"
-                to="/about"
-              >
-                About
-              </NavLink>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+      <Navbar
+        ref={(node) => (this.node = node)}
+        className="header-nav-bar"
+        fixed="top"
+        collapseOnSelect
+        expand="md"
+        variant="dark"
+        onToggle={this.setNavExpanded}
+        expanded={this.state.navExpanded}
+      >
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <NavLink to="/">
+            <img
+              src={require("../images/logo.png")}
+              style={{ height: "70px" }}
+              alt="logo"
+            ></img>
+          </NavLink>
+          {this.constructNav([
+            { name: "SpaceX Missions", route: "/" },
+            { name: "Mars", route: "/mars" },
+            { name: "About", route: "/about" },
+          ])}
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }
-
-export default Header;

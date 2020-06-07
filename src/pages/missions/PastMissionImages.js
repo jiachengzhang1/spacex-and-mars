@@ -8,7 +8,6 @@ const PastMissionImages = ({ images }) => {
         className="card border-light"
         style={{ backgroundColor: "transparent", border: "none" }}
       >
-        {" "}
         <img
           key={i}
           alt="missionImage"

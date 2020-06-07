@@ -1,9 +1,9 @@
 import React from "react";
 import { Accordion, Card } from "react-bootstrap";
-import MissionSummary from "./MissionSummary";
+import PastMissionSummary from "./PastMissionSummary";
 import PastMissionDetails from "./PastMissionDetails";
 
-const Mission = ({ mission }) => {
+export default function PastMission({ mission }) {
   const {
     mission_name,
     flight_number,
@@ -33,7 +33,7 @@ const Mission = ({ mission }) => {
           cursor: "pointer",
         }}
       >
-        <MissionSummary
+        <PastMissionSummary
           missionName={mission_name}
           details={details}
           date={date}
@@ -54,5 +54,4 @@ const Mission = ({ mission }) => {
       </Accordion.Collapse>
     </Card>
   );
-};
-export default Mission;
+}
