@@ -12,7 +12,7 @@ export default () => {
     html.scrollHeight,
     html.offsetHeight
   );
-  const windowBottom = windowHeight + window.pageYOffset * 1.1;
+  const windowBottom = windowHeight + window.pageYOffset;
 
   return windowBottom >= docHeight;
 };
