@@ -18,7 +18,7 @@ class Mars extends React.Component {
 
   constructWeatherTableHeader() {
     return (
-      <div>
+      <div className="weather-table-header">
         <h2>
           Daily Weather at{" "}
           <ATag href={MARS_WEATHER_LOCATION_LINK} text="Elysium Planitia" />
@@ -67,12 +67,11 @@ class Mars extends React.Component {
     const marsWeather = this.props.marsWeather;
     return (
       <div className="mars">
-        <div className="weather-card">
-          <div className="latest-weather">
-            <h2>Latest Weather on Mars</h2>
-            {this.constructLatestWeatherCard(marsWeather)}
-          </div>
+        <div className="latest-weather">
+          <h4>Latest Weather on Mars</h4>
+          {this.constructLatestWeatherCard(marsWeather)}
         </div>
+
         <div className="daily-weather-table">
           {this.constructWeatherTableHeader()}
           {this.constructWeatherTable(marsWeather)}

@@ -1,7 +1,7 @@
 import "./PastMissionDetails.css";
 import React from "react";
-import PastMissionImages from "./PastMissionImages";
 
+import PastMissionImages from "./PastMissionImages";
 import Table from "../../components/Table";
 import ATag from "../../components/ATag";
 
@@ -39,13 +39,38 @@ const constructTableBody = (payloads) => {
   );
 };
 
+const constructFirstStageTable = (cores) => {
+  return cores.map(
+    (
+      { core_serial, flight, block, gridfins, legs, reused, land_success },
+      i
+    ) => {
+      return (
+        <tr key={i}>
+          <td>{core_serial}</td>
+          <td>{flight}</td>
+          <td>{block}</td>
+          <td>{gridfins ? "Yes" : "No"}</td>
+          <td>{legs ? "Yes" : "No"}</td>
+          <td>{reused ? "Yes" : "No"}</td>
+          <td>{land_success ? "Yes" : "No"}</td>
+        </tr>
+      );
+    }
+  );
+};
+
 const PastMissionDetails = ({
   images,
-  siteName,
-  videoLink,
-  payloads,
-  rocketName,
+  details,
+  firstStage,
+  secondStage,
+  article_link,
+  wikipedia,
+  video_link,
 }) => {
+  const { block, payloads } = secondStage;
+  const { cores } = firstStage;
   return (
     <div
       className="past-dission-details row justify-content-center"
@@ -54,21 +79,30 @@ const PastMissionDetails = ({
       <div className="col col-md-12">
         <ul>
           <li>
-            <div className="rocket-name">
-              <h5>Rocket</h5>
-              <p>{rocketName}</p>
-            </div>
-          </li>
-
-          <li>
-            <div className="launch-site">
-              <h5>Launch Site</h5>
-              <p>{siteName}</p>
-            </div>
+            <p className="past-dission-details-p">&emsp;&emsp;{details}</p>
           </li>
           <li>
+            <h5>First Stage</h5>
+            <div className="table-responsive-md">
+              <Table
+                headers={[
+                  "Core Serial",
+                  "Number of Flights",
+                  "Block Number",
+                  "Has Gridfins",
+                  "Has Legs",
+                  "Reused",
+                  "Successful Landing",
+                ]}
+                body={constructFirstStageTable(cores)}
+              />
+            </div>
+          </li>
+          <li>
+            <h5>Second Stage</h5>
+            <h6>Block Number: {block}</h6>
             <div className="payloads">
-              <h5>Payloads</h5>
+              <h6>Payloads</h6>
               <div className="table-responsive-md">
                 <Table
                   headers={[
@@ -85,6 +119,7 @@ const PastMissionDetails = ({
               </div>
             </div>
           </li>
+
           <li>
             <h5>Mission Images</h5>
             <div className="card-group images">
@@ -92,8 +127,12 @@ const PastMissionDetails = ({
             </div>
           </li>
           <li>
-            <h5>Watch on YouTube</h5>
-            <ATag href={videoLink} text="YouTube" />
+            <h5>Links</h5>
+            <div className="past-mission-links">
+              <p>{<ATag href={article_link} text="Article" />}</p>
+              <p>{<ATag href={wikipedia} text="Wikipedia Page" />}</p>
+              <p>{<ATag href={video_link} text="Launch Video" />}</p>
+            </div>
           </li>
         </ul>
       </div>

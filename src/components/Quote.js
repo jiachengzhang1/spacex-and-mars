@@ -3,7 +3,7 @@ import React from "react";
 export default function Quote() {
   return (
     <blockquote className="blockquote text-center">
-      <p className="mb-2">
+      <p>
         If humanity doesn't land on Mars in my lifetime, I would be very
         disappointed.
       </p>

@@ -29,7 +29,7 @@ export default function Table({
 }) {
   if (bootstrap) {
     return (
-      <TB className={className} responsive="sm" bordered={false}>
+      <TB className={className} responsive="xl" bordered={false}>
         <thead style={{ color: "white" }}>
           <tr>{constructHeaderHTML(headers)}</tr>
         </thead>
@@ -48,5 +48,3 @@ export default function Table({
     </table>
   );
 }
-
-//  Table;

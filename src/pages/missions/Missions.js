@@ -1,16 +1,17 @@
+import "./Missions.scss";
 import React from "react";
-import PastMissionList from "./PastMissionList";
+// import PastMissionList from "./PastMissionList";
 import Quote from "../../components/Quote";
-import FutureMissions from "./FutureMissions";
+import FutureMissionCards from "./FutureMissionCards";
 
 export default function Missions() {
   return (
-    <div className="missions" style={{ marginTop: "130px" }}>
-      <Quote />
-      <FutureMissions />
-      <div className="past-missions mt-5">
-        <h1 style={{ textAlign: "center" }}>Past Missions</h1>
-        <PastMissionList />
+    <div className="missions">
+      <div className="future-missions-countdown">
+        <FutureMissionCards />
+        <div className="quote">
+          <Quote />
+        </div>
       </div>
     </div>
   );

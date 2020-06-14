@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import Header from "./Header";
 import Missions from "../pages/missions";
+import PastMissionList from "../pages/missions/PastMissionList";
 import Mars from "../pages/mars";
 import About from "../pages/about";
 
@@ -13,6 +14,9 @@ export default function App() {
         <Header />
         <Route exact path="/">
           <Missions />
+        </Route>
+        <Route exact path="/past-mission">
+          <PastMissionList />
         </Route>
         <Route exact path="/mars">
           <Mars />

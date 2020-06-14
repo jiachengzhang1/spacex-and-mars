@@ -10,7 +10,7 @@ const PastMissionImages = ({ images }) => {
       >
         <img
           key={i}
-          alt="missionImage"
+          alt="mission"
           src={image}
           height="250px"
           style={{ margin: "5px" }}

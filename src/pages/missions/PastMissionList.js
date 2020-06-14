@@ -29,7 +29,9 @@ class PastMissionList extends React.Component {
 
   getMissions() {
     return this.props.pastMissions.map((mission) => (
-      <PastMission key={mission.flight_number} mission={mission} />
+      <div>
+        <PastMission key={mission.flight_number} mission={mission} />
+      </div>
     ));
   }
 

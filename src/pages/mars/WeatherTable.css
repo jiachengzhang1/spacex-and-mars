@@ -1,15 +1,18 @@
-.weather-table {
-  margin-top: 20px;
+.daily-weather-table {
+  text-align: center;
+  justify-content: center;
+  background-color: #382929bb;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  top: -10vh;
 }
 
-.weather-table th {
-  height: 50px;
+.weather-table {
+  /* border: solid white; */
+  width: 80vw;
 }
 
 .weather-table table {
   width: 100%;
-}
-
-.child-table table {
-  border: black;
 }

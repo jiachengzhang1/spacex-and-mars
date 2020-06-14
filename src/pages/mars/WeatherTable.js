@@ -40,7 +40,7 @@ export default function WeatherTable({ weathers }) {
     PRE: ["Average", "Min", "Max"],
   };
   return (
-    <div className="weather-table">
+    <div className="weather-table table-responsive">
       <Table
         headers={["Time", "Temperature ( °C )", "Pressure ( Pa )"]}
         body={constructBody(headers, weathers)}

@@ -54,22 +54,19 @@ export default class Header extends React.Component {
         className="header-nav-bar"
         fixed="top"
         collapseOnSelect
-        expand="md"
+        expand="xl"
         variant="dark"
         onToggle={this.setNavExpanded}
         expanded={this.state.navExpanded}
       >
+        <Navbar.Brand as={NavLink} to="/">
+          SpaceX and Mars
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <NavLink to="/">
-            <img
-              src={require("../images/logo.png")}
-              style={{ height: "70px" }}
-              alt="logo"
-            ></img>
-          </NavLink>
           {this.constructNav([
-            { name: "SpaceX Missions", route: "/" },
+            { name: "Future Missions", route: "/" },
+            { name: "Past Missions", route: "/past-mission" },
             { name: "Mars", route: "/mars" },
             { name: "About", route: "/about" },
           ])}

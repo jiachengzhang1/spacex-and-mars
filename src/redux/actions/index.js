@@ -5,7 +5,7 @@ export const fetchFutureMissions = (limit) => async (dispatch) => {
   const response = await spaceX.get("/launches/upcoming", {
     params: {
       limit: limit,
-      sort: "launch_date_utc",
+      sort: "flight_number",
       order: "asc",
     },
   });

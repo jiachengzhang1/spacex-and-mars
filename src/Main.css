@@ -1,10 +1,10 @@
 body {
   font-family: "Ubuntu", sans-serif;
   margin: 0;
-  background-image: url("./images/backgroud.jpg");
+  background-image: url("./images/starshiplarge.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background-color: #021920;
+  background-color: #3f2d2dec;
   color: white;
 }

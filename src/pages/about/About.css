@@ -1,20 +1,36 @@
 .about {
-  margin-top: 130px;
+  display: flex;
+  bottom: 0px;
+  justify-content: center;
+  position: relative;
+  bottom: -150px;
   text-align: center;
 }
 
+.about-container {
+  border-radius: 10px;
+  background-color: #382929bb;
+  width: 60vw;
+  padding: 30px;
+}
+
 .about h1 {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .about a {
   text-decoration: none;
-  color: rgb(81, 81, 211);
+  color: rgb(161, 140, 140);
+}
+
+.about a:hover {
+  color: rgb(224, 195, 195);
 }
 
 .about p {
   font-size: 20px;
   margin: auto;
-  width: 60vw;
-  margin-top: 25px;
+  /* width: 60vw; */
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
