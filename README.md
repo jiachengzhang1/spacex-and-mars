@@ -44,9 +44,11 @@ Step 1, 2 then run `npm start`, the application should be served on localhost po
 * Semantic UI
 
 ## What's next👇
+* Add launch filters
+* Add data visualizations
 * Code refactoring
 * Improve UI for mobile version
-* Adding SpaceX rocket and spaceship pages
+* Add SpaceX rocket and spaceship pages
 
 I'm open for any feedbacks or concerns!😃 Thanks you🙏 And Go SpaceX🚀🚀
 
