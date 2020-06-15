@@ -1,4 +1,4 @@
-<h1 align="center">spacex-and-mars 🚀</h1>
+<h1 align="center">SpaceX and Mars 🚀</h1>
 <h3 align="center">Check out this SpaceX missions and Mars weather website at 
   <a href="https://www.spacexandmars.com">
     SpaceX and Mars
