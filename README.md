@@ -1,6 +1,14 @@
-# spacex-and-mars 🚀
-
-Check out this SpaceX missions and Mars weather website at [SpaceX and Mars](https://www.spacexandmars.com)! 🚀🚀🚀
+<h1 align="center">spacex-and-mars 🚀</h1>
+<h3 align="center">Check out this SpaceX missions and Mars weather website at 
+  <a href="https://www.spacexandmars.com">
+    SpaceX and Mars
+  </a>🚀🚀🚀
+</h3>
+<p align="center">
+  <a href="https://github.com/jiachengzhang1/spacex-and-mars/releases/tag/v1.0.0" alt="GitHub Package Registry version" rel="noopener noreferrer" target="_blank">
+    <img src="https://img.shields.io/github/v/release/jiachengzhang1/spacex-and-mars?color=green&label=version" />
+  </a>
+</p>
 
 ## Introduction
 The website displays information about SpaceX's next upcoming, future and past mission at SpaceX Mission page, the weather on Mars at Mars page and general information at About page. Note that the site is created purely for coding/learning web development practices and personal interest about going to Mars, and doesn't have any relations with either SpaceX or NASA.
