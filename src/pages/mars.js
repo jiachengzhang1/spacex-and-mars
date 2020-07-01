@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 import Layout from "../components/Layout";
-import Mars from "../components/Mars/Mars";
+import Mars from "../components/Mars";
 
 const MarsPage = () => {
   return (
