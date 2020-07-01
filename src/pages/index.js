@@ -2,14 +2,14 @@ import "../components/Missions.scss";
 import React from "react";
 
 import Layout from "../components/Layout";
-import FutureMission from "../components/FutureMissions";
+import FutureMissions from "../components/FutureMissions/FutureMissions";
 import SEO from "../components/SEO";
 
 const IndexPage = () => {
   return (
     <Layout>
       <SEO />
-      <FutureMission />
+      <FutureMissions />
       <div className="quote">
         <blockquote className="blockquote text-center">
           <p>

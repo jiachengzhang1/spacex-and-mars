@@ -1,5 +1,5 @@
 import React from "react";
-import Countdown from "../Countdown";
+import Countdown from "../Countdown/Countdown";
 import IconString from "../IconString";
 
 export default function FutureMission({ mission, showCountdown = false }) {

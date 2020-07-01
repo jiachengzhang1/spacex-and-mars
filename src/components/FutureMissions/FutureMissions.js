@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import FutureMission from "./FutureMission";
 
-const FutureMissionCards = () => {
+const FutureMissions = () => {
   const { spacexData } = useStaticQuery(graphql`
     query {
       spacexData {
@@ -37,4 +37,4 @@ const FutureMissionCards = () => {
   );
 };
 
-export default FutureMissionCards;
+export default FutureMissions;
