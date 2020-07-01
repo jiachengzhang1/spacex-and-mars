@@ -1,5 +1,5 @@
 import React from "react";
-import CountDown from "../Countdown";
+import Countdown from "../Countdown";
 import IconString from "../IconString";
 
 export default function FutureMission({ mission, showCountdown = false }) {
@@ -16,7 +16,7 @@ export default function FutureMission({ mission, showCountdown = false }) {
       <IconString iconClass="rocket icon" string={rocket} />
       <div className="description m-auto">
         {showCountdown ? (
-          <CountDown
+          <Countdown
             divider={true}
             textFontSize="12px"
             numFontSize="38px"
