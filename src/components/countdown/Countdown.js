@@ -2,7 +2,9 @@ import React from "react";
 import CountdownNum from "./CountdownNum";
 
 export default class Countdown extends React.Component {
-  state = { counter: 0 };
+  state = {
+    counter: new Date(this.props.time).getTime() - new Date().getTime(),
+  };
 
   componentDidMount() {
     const targetDate = new Date(this.props.time).getTime();
@@ -23,7 +25,10 @@ export default class Countdown extends React.Component {
     return (
       <div
         className="row justify-content-center"
-        style={{ background: "transparent", fontSize: this.props.numFontSize }}
+        style={{
+          background: "transparent",
+          fontSize: this.props.numFontSize,
+        }}
       >
         <CountdownNum
           num={Math.floor(remain / (24 * 60 * 60 * 1000))}

@@ -1,18 +1,22 @@
-import "./Header.css";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "gatsby";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import "./header.scss";
 
 export default class Header extends React.Component {
   state = { navExpanded: false };
 
   componentWillMount() {
-    document.addEventListener("mousedown", this.handleClick, false);
+    if (typeof document !== "undefined") {
+      document.addEventListener("mousedown", this.handleClick, false);
+    }
   }
 
   componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClick, false);
+    if (typeof document !== "undefined") {
+      document.removeEventListener("mousedown", this.handleClick, false);
+    }
   }
 
   handleClick = (e) => {
@@ -33,15 +37,15 @@ export default class Header extends React.Component {
     return (
       <Nav className="header-nav m-auto">
         {routes.map(({ name, route }, i) => (
-          <NavLink
+          <Link
             key={i}
             onClick={this.closeNav}
-            exact
             className="nav-link"
+            activeClassName="active-nav-link"
             to={route}
           >
             {name}
-          </NavLink>
+          </Link>
         ))}
       </Nav>
     );
@@ -59,14 +63,14 @@ export default class Header extends React.Component {
         onToggle={this.setNavExpanded}
         expanded={this.state.navExpanded}
       >
-        <Navbar.Brand as={NavLink} to="/">
-          SpaceX and Mars
+        <Navbar.Brand as={Link} to="/">
+          <h1>SpaceX and Mars</h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           {this.constructNav([
             { name: "Future Missions", route: "/" },
-            { name: "Past Missions", route: "/past-mission" },
+            { name: "Past Missions", route: "/pastMissions" },
             { name: "Mars", route: "/mars" },
             { name: "About", route: "/about" },
           ])}

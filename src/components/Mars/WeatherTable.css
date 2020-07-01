@@ -1,0 +1,65 @@
+.daily-weather-table {
+  position: relative;
+  top: -6vh;
+  /* margin-bottom: 0; */
+}
+
+.daily-weather-table a {
+  text-decoration: none;
+  color: rgb(173, 160, 160);
+}
+
+.daily-weather-table a:hover {
+  color: rgb(226, 216, 216);
+}
+
+.weather-table-header {
+  background-color: #352323e7;
+  position: relative;
+  margin-bottom: 0px !important;
+  padding-top: 14px;
+  padding-bottom: 8px;
+  width: 80vw;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.822) !important;
+}
+
+.weather-table {
+  width: 80vw;
+}
+
+.weather-table table {
+  width: 100%;
+  margin: 0;
+}
+
+.parent-table td {
+  /* padding: 0; */
+  border: none;
+  padding: 0;
+  /* padding-bottom: 18px; */
+}
+
+.parent-table th {
+  border: none !important;
+  background-color: #332626e0;
+}
+
+.child-table th {
+  padding-right: 10px;
+  margin-top: -10px !important;
+  background: none;
+}
+
+.child-table td {
+  /* padding-bottom: 0; */
+  padding-bottom: 1rem;
+}
+
+.time-table,
+.pre-table {
+  background-color: #332626e0;
+}
+
+.at-table {
+  background-color: #5e4747e0;
+}

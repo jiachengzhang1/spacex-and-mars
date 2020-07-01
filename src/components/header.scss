@@ -1,0 +1,38 @@
+.header-nav-bar {
+  background-color: #382929f5;
+  font-family: "Orbitron", sans-serif;
+}
+
+.header-nav-bar h1 {
+  color: white;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: auto;
+  font-size: 26px !important;
+  padding: 0px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.header-nav-bar a {
+  text-decoration: none;
+}
+
+.header-nav {
+  font-size: 22px;
+  margin-right: 1rem !important;
+}
+
+.nav-link {
+  margin-right: 3.5rem;
+}
+
+.active-nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
