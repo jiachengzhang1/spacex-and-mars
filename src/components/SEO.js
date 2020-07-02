@@ -33,7 +33,7 @@ const SEO = () => {
       <meta property="og:type" content="website" data-react-helmet="true" />
       <meta
         property="og:image"
-        content={require("../images/socialImage.png")}
+        content={require("../images/socialImage.jpg")}
       />
       <meta property="og:title" content={title} data-react-helmet="true" />
       <meta
