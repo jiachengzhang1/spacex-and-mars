@@ -1,63 +1,12 @@
 const axios = require("axios");
 
-function getMissionObjects(missions) {
-  let pastMissions = [];
-  let futureMissions = [];
-  missions.forEach(
-    ({
-      id,
-      name,
-      flight_number,
-      date_utc,
-      launchpad,
-      success,
-      failures,
-      details,
-      rocket,
-      payloads,
-      cores,
-      links,
-      upcoming,
-    }) => {
-      if (upcoming) {
-        if (futureMissions.length <= 4) {
-          futureMissions.push({
-            id,
-            name,
-            flight_number,
-            date_utc,
-            launchpad: launchpad.full_name,
-            rocket: rocket.name,
-          });
-        }
-      } else {
-        pastMissions.push({
-          id,
-          name,
-          flight_number,
-          date_utc,
-          launchpad: launchpad.full_name,
-          success,
-          failures,
-          details,
-          rocket: rocket.name,
-          payloads,
-          cores,
-          links,
-        });
-      }
-    }
-  );
-  return {
-    pastMissions: pastMissions.reverse(),
-    futureMissions,
-  };
-}
+const constructFutureMissionData = require("../src/utils/constructFutureMissionData");
+const constructPastMissionData = require("../src/utils/constructPastMissionData");
 
 module.exports = async function fetchSpaceXData() {
   try {
-    const requestBody = {
-      query: {},
+    const futureMissionsRequestBody = {
+      query: { upcoming: true },
       options: {
         sort: { flight_number: "asc" },
         populate: [
@@ -69,16 +18,43 @@ module.exports = async function fetchSpaceXData() {
             populate: "core",
           },
         ],
-        pagination: false,
+        limit: 5,
       },
     };
-
-    const response = await axios.post(
+    const futureMissionresponse = await axios.post(
       "https://api.spacexdata.com/v4/launches/query",
-      requestBody
+      futureMissionsRequestBody
+    );
+    const futureMissions = constructFutureMissionData(
+      futureMissionresponse.data.docs
     );
 
-    return getMissionObjects(response.data.docs);
+    const pastMissionsRequestBody = {
+      query: { upcoming: false },
+      options: {
+        sort: { flight_number: "desc" },
+        populate: [
+          "payloads",
+          "launchpad",
+          "rocket",
+          {
+            path: "cores",
+            populate: "core",
+          },
+        ],
+        limit: 5,
+      },
+    };
+    const pastMissionresponse = await axios.post(
+      "https://api.spacexdata.com/v4/launches/query",
+      pastMissionsRequestBody
+    );
+    const pastMissions = constructPastMissionData(
+      pastMissionresponse.data.docs
+    );
+    // console.log(pastMissions);
+
+    return { futureMissions, pastMissions };
   } catch (error) {
     console.error(error);
   }

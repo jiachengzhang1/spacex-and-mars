@@ -1,4 +1,3 @@
-import "../components/Missions.scss";
 import React from "react";
 
 import Layout from "../components/Layout";

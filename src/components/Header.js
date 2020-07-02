@@ -34,21 +34,27 @@ export default class Header extends React.Component {
   };
 
   constructNav(routes) {
-    return (
-      <Nav className="header-nav m-auto">
-        {routes.map(({ name, route }, i) => (
-          <Link
-            key={i}
-            onClick={this.closeNav}
-            className="nav-link"
-            activeClassName="active-nav-link"
-            to={route}
-          >
-            {name}
-          </Link>
-        ))}
-      </Nav>
-    );
+    if (typeof window !== "undefined") {
+      // const path = window.location.href.toString().split("/")[3].toLowerCase();
+      // console.log(path);
+
+      return (
+        <Nav className="header-nav m-auto">
+          {routes.map(({ name, route }, i) => (
+            <Link
+              key={i}
+              onClick={this.closeNav}
+              className={`nav-link `}
+              activeClassName="active-nav-link"
+              to={route}
+            >
+              {name}
+            </Link>
+          ))}
+        </Nav>
+      );
+    }
+    return null;
   }
 
   render() {
