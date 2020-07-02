@@ -60,7 +60,9 @@ export default function PastMission({ mission }) {
           flight_number={flight_number}
           missionName={name}
           date={date}
-          missionPatch={patch.small}
+          missionPatch={
+            !patch.small ? require("../../images/noImage.png") : patch.small
+          }
           launchSuccess={success}
           site_name_long={launchpad}
           rocketName={rocket}

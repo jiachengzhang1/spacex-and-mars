@@ -10,32 +10,38 @@ const SEO = () => {
           title
           author
           description
-          url
+          siteUrl
         }
       }
     }
   `);
 
-  const { title, author, description, url } = site.siteMetadata;
+  const {
+    title,
+    author,
+    description,
+    siteUrl,
+    // siteImageUrl,
+  } = site.siteMetadata;
 
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="author" content={author} data-react-helmet="true" />
-      <meta name="descritpion" content={description} data-react-helmet="true" />
+      <meta name="description" content={description} data-react-helmet="true" />
 
       <meta property="og:type" content="website" data-react-helmet="true" />
       <meta
         property="og:image"
-        content={require("../images/starshiplarge.jpg")}
+        content={require("../images/socialImage.png")}
       />
       <meta property="og:title" content={title} data-react-helmet="true" />
       <meta
-        property="og:descritpion"
+        property="og:description"
         content={description}
         data-react-helmet="true"
       />
-      <meta property="og:url" content={url} data-react-helmet="true" />
+      <meta property="og:url" content={siteUrl} data-react-helmet="true" />
 
       <link
         rel="dns-prefetch"

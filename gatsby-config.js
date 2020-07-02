@@ -3,7 +3,7 @@ module.exports = {
     title: `SpaceX and Mars`,
     author: `Jiacheng Zhang`,
     description: `SpaceX and Mars is an excellent place to display SpaceX launch information, countdown and Mars weather.`,
-    url: `https://www.spacexandmars.com`,
+    // siteImageUrl: ``,
     siteUrl: `https://www.spacexandmars.com`,
   },
   plugins: [
