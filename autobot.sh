@@ -22,6 +22,8 @@ check_update () {
     fi
 }
 
+cd /var/www/spacexandmars.com/
+
 LOG_DIR=./log
 TMP_DIR=./tmp
 
