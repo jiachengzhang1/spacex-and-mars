@@ -20,7 +20,6 @@ async function handleScroll(
   if (lastFlightNum === 1) {
     return;
   }
-  console.log(isWindowBottom());
 
   if (isWindowBottom()) {
     const response = await axios.post(
