@@ -3,6 +3,25 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+
+// weathers {
+//   sol
+//   Season
+//   Last_UTC
+//   AT {
+//     av
+//     mn
+//     mx
+//   }
+//   PRE {
+//     av
+//     mn
+//     mx
+//   }
+// }
+// }
+// }
+
 function getWeatherObjects(data) {
   const { sol_keys } = data;
   let weatherObjects = [];
@@ -10,6 +29,23 @@ function getWeatherObjects(data) {
     const { AT, PRE, Last_UTC, Season } = data[sol];
     weatherObjects.push({ sol, AT, PRE, Last_UTC, Season });
   });
+  if (weatherObjects.length == 0) {
+    weatherObjects.push({
+      sol: 404, 
+      AT: {
+        av: 404,
+        mn: 404,
+        mx: 404
+      }, 
+      PRE: {
+        av: 404,
+        mn: 404,
+        mx: 404
+      }, 
+      Last_UTC: 404, 
+      Season: 404
+    })
+  }
   return { weathers: weatherObjects };
 }
 

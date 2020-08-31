@@ -8,6 +8,7 @@ import {
   NASA_INSIGHT_LINK,
 } from "../../utils/constants";
 import ATag from "../ATag";
+import InvalidData from "../InvalidData";
 
 function constructWeatherTableHeader() {
   return (
@@ -66,9 +67,18 @@ const Mars = () => {
       }
     }
   `);
+
+  if (!isValidData(nasaData)) {
+    return <InvalidData source={"NASA"} link={"https://mars.nasa.gov/insight/weather/"}/>
+    // return <div>{nasaData.weathers[0].sol}</div>;
+  }
+
+  console.log(nasaData);
+
   const weathers = nasaData.weathers.sort(function (a, b) {
     return b.sol - a.sol;
   });
+
   return (
     <div className="mars">
       <div className="latest-weather shadow">
@@ -82,5 +92,19 @@ const Mars = () => {
     </div>
   );
 };
+
+function isValidData(nasaData) {
+  if (nasaData.weathers.length === 1) {
+    const data = nasaData.weathers[0];
+    const {sol, Season, Last_UTC, AT, PRE} = data;
+    
+    if (sol === 404 && Season === 404 && Last_UTC === 404 && 
+        AT.av === 404 && AT.mn === 404 && AT.mx === 404 &&
+        PRE.av === 404 && PRE.mn === 404 && PRE.mx === 404) {
+          return false;
+        }
+  }
+  return true;
+}
 
 export default Mars;

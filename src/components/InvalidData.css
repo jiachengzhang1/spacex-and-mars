@@ -1,0 +1,15 @@
+.invalid-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    align-items: center !important;
+    overflow: hidden;
+}
+
+.invalid-data p {
+    font-size: 18px;
+    background: black;
+    padding: 15px;
+    border-radius: 10px;
+}
