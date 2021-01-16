@@ -2,8 +2,8 @@
     margin-top: 15px;
 
     .spacex-img {
-        border: 1px solid rgb(210, 210, 210);
-        margin: 10px;
+        // border: 1px solid rgb(210, 210, 210);
+        // margin: 10px;
         padding: 15px 20px;
         height: fit-content;
         img {
@@ -34,7 +34,7 @@
 
     .upcoming-launch {
         margin: 10px;
-        border: 1px solid rgb(210, 210, 210);
+        // border: 1px solid rgb(210, 210, 210);
         padding: 15px 20px;
         height: fit-content;
 
@@ -97,16 +97,16 @@
     }
 
     .launches {
-        margin: 10px;
-
         .search-bar {
             label,
             input,
-            button {
+            button,
+            span {
                 margin-right: 20px;
             }
 
-            label {
+            label,
+            span {
                 font-size: 18px;
                 font-weight: 600;
             }

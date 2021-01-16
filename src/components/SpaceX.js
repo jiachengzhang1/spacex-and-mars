@@ -11,7 +11,6 @@ import { IconContext } from "react-icons";
 const SpaceX = ({ className }) => {
     return (
         <div className={`spacex-img ${className}`}>
-            <h1>SpaceX</h1>
             <p>
                 SpaceX designs, manufactures and launches advanced rockets and
                 spacecraft. The company was founded in 2002 to revolutionize

@@ -21,6 +21,9 @@ const SearchBar = () => {
 
     return (
         <div className="search-bar">
+            <span>
+                <b>PAST LAUNCHES</b>
+            </span>
             <label htmlFor="search">Search</label>
             <input
                 type="text"
