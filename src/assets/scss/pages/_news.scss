@@ -1,0 +1,36 @@
+.news {
+    .news-content {
+        padding: 0;
+
+        h2 {
+            margin-top: -10px;
+
+            a {
+                color: black;
+                font-weight: 600;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .news-date span {
+        color: rgb(117, 117, 117);
+    }
+
+    .news-caption {
+        color: rgb(117, 117, 117);
+
+        a {
+            color: rgb(117, 117, 117);
+        }
+    }
+
+    .news-sidebar {
+        border-left: rgb(223, 215, 215) 1px solid;
+        padding-left: 22px;
+
+        h2 {
+            font-size: 18px;
+        }
+    }
+}

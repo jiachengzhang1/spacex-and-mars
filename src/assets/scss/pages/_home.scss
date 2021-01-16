@@ -1,0 +1,155 @@
+.home {
+    margin-top: 15px;
+
+    .spacex-img {
+        border: 1px solid rgb(210, 210, 210);
+        margin: 10px;
+        padding: 15px 20px;
+        height: fit-content;
+        img {
+            filter: blur(1px);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        svg {
+            width: 25px;
+            height: 25px;
+            margin-left: 20px;
+            float: right;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .stats {
+            height: 445px;
+            background-color: blue;
+        }
+    }
+
+    .upcoming-launch {
+        margin: 10px;
+        border: 1px solid rgb(210, 210, 210);
+        padding: 15px 20px;
+        height: fit-content;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        p {
+            span {
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            // max-height: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 10; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+
+        .countdown {
+            margin: 0;
+            padding: 10px;
+            margin-bottom: 10px;
+            // border: black 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            overflow: hidden;
+        }
+
+        button {
+            float: right;
+        }
+
+        .countdown-digit {
+            // border: black 1px solid;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            p {
+                text-align: center;
+                margin: 0;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .launches {
+        margin: 10px;
+
+        .search-bar {
+            label,
+            input,
+            button {
+                margin-right: 20px;
+            }
+
+            label {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            button {
+                background-color: black;
+                color: white;
+                // padding: 5px;
+                text-transform: uppercase;
+                border: none;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        table {
+            margin-top: 20px;
+            padding: 0;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+
+            td,
+            th {
+                border-bottom: 1px solid rgb(210, 210, 210);
+                padding: 5px 10px;
+            }
+
+            td {
+                max-width: 200px;
+            }
+
+            tbody {
+                tr:hover {
+                    background-color: rgba(235, 235, 235, 0.35);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        nav {
+            float: right;
+            margin-bottom: 40px;
+        }
+    }
+}
