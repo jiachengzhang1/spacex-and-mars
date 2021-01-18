@@ -82,18 +82,18 @@ const Starship = () => {
                                 allowfullscreen
                             ></iframe>
                         </div>
-                        <blockquote>
-                            On December 9, 2020, Starship serial number 8 (SN8)
-                            completed a high-altitude flight test as it
-                            successfully ascended, transitioned propellant, and
-                            demonstrated a first-of-its-kind controlled
-                            aerodynamic descent and landing flip maneuver –
-                            which will enable landing where prepared surfaces or
-                            runways do not exist, including the Moon, Mars, and
-                            beyond.
-                        </blockquote>
-                    </div>
-                    <div className="col-lg">
+                        <div className="col-lg">
+                            <blockquote>
+                                On December 9, 2020, Starship serial number 8
+                                (SN8) completed a high-altitude flight test as
+                                it successfully ascended, transitioned
+                                propellant, and demonstrated a first-of-its-kind
+                                controlled aerodynamic descent and landing flip
+                                maneuver – which will enable landing where
+                                prepared surfaces or runways do not exist,
+                                including the Moon, Mars, and beyond.
+                            </blockquote>
+                        </div>
                         <div>
                             <h3>STARSHIP SN6</h3>
                             <div className="embed-responsive embed-responsive-16by9">
