@@ -2,6 +2,9 @@ import axios from "axios";
 import {
     FETCH_LAUNCHES_FAILED,
     FETCH_LAUNCHES_REQUEST,
+    FETCH_LAUNCHES_STATS_FAILED,
+    FETCH_LAUNCHES_STATS_REQUEST,
+    FETCH_LAUNCHES_STATS_SUCCESS,
     FETCH_LAUNCHES_SUCCESS,
     FETCH_NEWS_FAILED,
     FETCH_NEWS_REQUEST,
@@ -83,6 +86,86 @@ export const fetchLaunchesFailed = (error) => {
 
 export const fetchLaunches = (params) => {
     return fetchLaunchesHelper(getBody(params));
+};
+
+export const fetchLaunchesStatsRequest = () => {
+    return {
+        type: FETCH_LAUNCHES_STATS_REQUEST,
+    };
+};
+
+export const fetchLaunchesStatsSuccess = (data) => {
+    return {
+        type: FETCH_LAUNCHES_STATS_SUCCESS,
+        payload: data,
+    };
+};
+
+export const fetchLaunchesStatsFailed = (error) => {
+    return {
+        type: FETCH_LAUNCHES_STATS_FAILED,
+        payload: error,
+    };
+};
+
+export const fetchLaunchesStats = () => {
+    const body = {
+        query: {
+            upcoming: false,
+        },
+        options: {
+            select: {
+                success: true,
+                date_utc: true,
+                _id: false,
+            },
+            pagination: false,
+        },
+    };
+    return async (dispatch) => {
+        dispatch(fetchLaunchesStatsRequest());
+        try {
+            const response = await axios.post(
+                "https://api.spacexdata.com/v4/launches/query",
+                body
+            );
+            dispatch(fetchLaunchesStatsSuccess(response.data));
+        } catch (error) {
+            dispatch(fetchLaunchesStatsFailed(error));
+        }
+    };
+};
+
+export const fetchRocketsStats = () => {
+    const body = {
+        options: {
+            select: {
+                name: true,
+                success_rate_pct: true,
+                cost_per_launch: true,
+                active: true,
+                _id: false,
+            },
+            pagination: false,
+        },
+    };
+};
+
+export const fetchStarlinkStats = () => {
+    const body = {
+        query: {},
+        options: {
+            select: {
+                _id: false,
+                launch: true,
+            },
+            populate: {
+                path: "launch",
+                select: ["date_utc"],
+            },
+            pagination: false,
+        },
+    };
 };
 
 export const fetchNextUpcomingLaunch = () => {

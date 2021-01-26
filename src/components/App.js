@@ -21,7 +21,7 @@ const App = () => {
                         <Route exact path="/starlink">
                             <Starlink />
                         </Route>
-                        <Route exact path="/starship">
+                        <Route exact path="/mars">
                             <Starship />
                         </Route>
                         <Route exact path="/news">

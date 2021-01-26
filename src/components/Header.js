@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     const dropdownItems = [
+        { name: "WEATHER ON MARS", url: "/rover" },
         { name: "STARSHIP", url: "/starship" },
-        { name: "ROVER", url: "/rover" },
     ];
     return (
         <header>
@@ -35,8 +35,9 @@ const Header = () => {
                 >
                     <ul className="navbar-nav">
                         {getNavItem("HOME", "/")}
-                        {getNavItem("STARLINK", "/starlink")}
-                        {getNavDropdown("MARS", dropdownItems)}
+                        {/* {getNavItem("STARLINK", "/starlink")} */}
+                        {/* {getNavDropdown("MARS", dropdownItems)} */}
+                        {getNavItem("MARS", "/mars")}
                         {getNavItem("NEWS", "/news")}
                     </ul>
                 </div>

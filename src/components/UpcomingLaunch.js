@@ -22,6 +22,7 @@ const UpcomingLaunch = ({ className }) => {
         return <div>{error}</div>;
     }
 
+    // console.log(launch);
     const { name, details, date_utc, rocket } = launch;
 
     return (

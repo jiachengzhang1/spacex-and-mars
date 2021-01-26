@@ -1,7 +1,6 @@
 .starship {
     padding: 0;
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 35px 0px;
 
     // .test111 {
     //     border: 1px solid rgb(210, 210, 210);
@@ -10,7 +9,7 @@
     // }
 
     table {
-        margin-top: 20px;
+        margin-bottom: 20px;
         padding: 0;
         width: 100%;
         border-collapse: collapse;
@@ -19,7 +18,7 @@
         td,
         th {
             border-bottom: 1px solid rgb(210, 210, 210);
-            padding: 5px 10px;
+            padding: 0px 8px;
         }
 
         td {

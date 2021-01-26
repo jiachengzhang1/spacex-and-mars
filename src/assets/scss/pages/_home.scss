@@ -15,16 +15,16 @@
             color: black;
         }
 
-        svg {
-            width: 25px;
-            height: 25px;
-            margin-left: 20px;
-            float: right;
+        // svg {
+        //     width: 25px;
+        //     height: 25px;
+        //     margin-left: 20px;
+        //     float: right;
 
-            &:hover {
-                cursor: pointer;
-            }
-        }
+        //     &:hover {
+        //         cursor: pointer;
+        //     }
+        // }
 
         .stats {
             height: 445px;
@@ -64,35 +64,8 @@
             -webkit-box-orient: vertical;
         }
 
-        .countdown {
-            margin: 0;
-            padding: 10px;
-            margin-bottom: 10px;
-            // border: black 1px solid;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            overflow: hidden;
-        }
-
         button {
             float: right;
-        }
-
-        .countdown-digit {
-            // border: black 1px solid;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            p {
-                text-align: center;
-                margin: 0;
-                font-size: 16px;
-                font-weight: 600;
-            }
         }
     }
 
