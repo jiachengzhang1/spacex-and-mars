@@ -71,24 +71,15 @@ const SpaceX = ({ className }) => {
                     <span className="sr-only">Next</span>
                 </a>
             </div>
+
             <a
-                href="https://www.facebook.com/spacenewsx/"
+                href="https://www.spacex.com/"
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                <IconContext.Provider value={{ color: "#3b5998" }}>
-                    <FaFacebook />
+                <IconContext.Provider value={{ color: "#005288" }}>
+                    <FaLaptopCode />
                 </IconContext.Provider>
-            </a>
-            <a
-                href="https://www.instagram.com/spacex/"
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                <IconContext.Provider
-                    value={{ color: "#fbad50" }}
-                ></IconContext.Provider>
-                <FaInstagram />
             </a>
             <a
                 href="https://www.youtube.com/spacex"
@@ -109,12 +100,22 @@ const SpaceX = ({ className }) => {
                 </IconContext.Provider>
             </a>
             <a
-                href="https://www.spacex.com/"
+                href="https://www.instagram.com/spacex/"
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                <IconContext.Provider value={{ color: "#005288" }}>
-                    <FaLaptopCode />
+                <IconContext.Provider
+                    value={{ color: "#fbad50" }}
+                ></IconContext.Provider>
+                <FaInstagram />
+            </a>
+            <a
+                href="https://www.facebook.com/spacenewsx/"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <IconContext.Provider value={{ color: "#3b5998" }}>
+                    <FaFacebook />
                 </IconContext.Provider>
             </a>
         </div>

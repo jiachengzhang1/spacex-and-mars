@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Countdown from "../components/Countdown";
 import { fetchNextUpcomingLaunch } from "../redux/actions";
+import AddToCalendarButton from "./AddToCalendarButton";
 
 const UpcomingLaunch = ({ className }) => {
     const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const UpcomingLaunch = ({ className }) => {
 
     // console.log(launch);
     const { name, details, date_utc, rocket } = launch;
+    console.log(launch);
 
     return (
         <div className={`upcoming-launch ${className}`}>
@@ -39,7 +41,11 @@ const UpcomingLaunch = ({ className }) => {
                 <span>Rocket:</span> {rocket.name}
             </p>
             <Countdown date={date_utc} goal="launch" />
-            <button>Add to Calender</button>
+            <AddToCalendarButton
+                dateUtc={date_utc}
+                description={details}
+                title={name}
+            />
         </div>
     );
 };

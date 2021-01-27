@@ -1,5 +1,6 @@
 import React from "react";
 import Countdown from "../components/Countdown";
+import AddToCalendarButton from "./AddToCalendarButton";
 
 const NASAMission = () => {
     return (
@@ -13,7 +14,11 @@ const NASAMission = () => {
                             date={new Date("Thu Feb 18 2021 12:55:00 GMT-0800")}
                             goal="LANDING"
                         />
-                        <button>ADD TO CALENDAR</button>
+                        <AddToCalendarButton
+                            dateUtc="Thu Feb 18 2021 12:55:00 GMT-0800"
+                            description="Seek signs of ancient life and collect samples of rock and regolith (broken rock and soil) for possible return to Earth."
+                            title="NASA Mars 2020 Mission"
+                        />
                         <p>
                             <a href="https://mars.nasa.gov/mars2020/timeline/landing/watch-online/">
                                 UPCOMING EVENTS
