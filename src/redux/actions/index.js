@@ -9,6 +9,9 @@ import {
     FETCH_NEWS_FAILED,
     FETCH_NEWS_REQUEST,
     FETCH_NEWS_SUCCESS,
+    FETCH_STARLINK_STATS_FAILED,
+    FETCH_STARLINK_STATS_REQUEST,
+    FETCH_STARLINK_STATS_SUCCESS,
     FETCH_UPCOMING_LAUNCH_FAILED,
     FETCH_UPCOMING_LAUNCH_REQUEST,
     FETCH_UPCOMING_LAUNCH_SUCCESS,
@@ -117,7 +120,11 @@ export const fetchLaunchesStats = () => {
             select: {
                 success: true,
                 date_utc: true,
+                "cores.reused": true,
                 _id: false,
+            },
+            sort: {
+                date_utc: "asc",
             },
             pagination: false,
         },
@@ -129,6 +136,7 @@ export const fetchLaunchesStats = () => {
                 "https://api.spacexdata.com/v4/launches/query",
                 body
             );
+            console.log(response.data);
             dispatch(fetchLaunchesStatsSuccess(response.data));
         } catch (error) {
             dispatch(fetchLaunchesStatsFailed(error));
@@ -151,6 +159,26 @@ export const fetchRocketsStats = () => {
     };
 };
 
+export const fetchStarlinkStatsRequest = () => {
+    return {
+        type: FETCH_STARLINK_STATS_REQUEST,
+    };
+};
+
+export const fetchStarlinkStatsSuccess = (data) => {
+    return {
+        type: FETCH_STARLINK_STATS_SUCCESS,
+        payload: data,
+    };
+};
+
+export const fetchStarlinkStatsFailed = (error) => {
+    return {
+        type: FETCH_STARLINK_STATS_FAILED,
+        payload: error,
+    };
+};
+
 export const fetchStarlinkStats = () => {
     const body = {
         query: {},
@@ -163,8 +191,21 @@ export const fetchStarlinkStats = () => {
                 path: "launch",
                 select: ["date_utc"],
             },
+
             pagination: false,
         },
+    };
+    return async (dispatch) => {
+        dispatch(fetchStarlinkStatsRequest());
+        try {
+            const response = await axios.post(
+                "https://api.spacexdata.com/v4/starlink/query",
+                body
+            );
+            dispatch(fetchStarlinkStatsSuccess(response.data));
+        } catch (error) {
+            dispatch(fetchStarlinkStatsFailed(error));
+        }
     };
 };
 

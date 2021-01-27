@@ -38,7 +38,7 @@ const UpcomingLaunch = ({ className }) => {
             <p>
                 <span>Rocket:</span> {rocket.name}
             </p>
-            <Countdown date={date_utc} />
+            <Countdown date={date_utc} goal="launch" />
             <button>Add to Calender</button>
         </div>
     );

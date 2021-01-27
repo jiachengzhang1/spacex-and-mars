@@ -5,32 +5,29 @@ import Header from "./Header";
 import News from "../pages/News";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "../pages/Home";
-import Starlink from "../pages/Starlink";
-import Starship from "../pages/Starship";
+import Mars from "../pages/Mars";
 
 const App = () => {
     return (
-        <>
-            <Router>
-                <Header />
-                <div className="container">
-                    <div className="main-layout">
-                        <Route exact path="/">
-                            <Home />
-                        </Route>
-                        <Route exact path="/starlink">
-                            <Starlink />
-                        </Route>
-                        <Route exact path="/mars">
-                            <Starship />
-                        </Route>
-                        <Route exact path="/news">
-                            <News />
-                        </Route>
-                    </div>
+        <Router>
+            <Header />
+            <div className="container">
+                <div className="main-layout">
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    {/* <Route exact path="/starlink">
+                        <Starlink />
+                    </Route> */}
+                    <Route exact path="/mars">
+                        <Mars />
+                    </Route>
+                    <Route exact path="/news">
+                        <News />
+                    </Route>
                 </div>
-            </Router>
-        </>
+            </div>
+        </Router>
     );
 };
 

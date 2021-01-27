@@ -4,6 +4,7 @@ import launches from "./launches";
 import query from "./query";
 import upcomingLaunch from "./upcomingLaunch";
 import launchesStats from "./launchesStats";
+import starlinkStats from "./starlinkStats";
 
 export default combineReducers({
     news,
@@ -11,4 +12,5 @@ export default combineReducers({
     query,
     upcomingLaunch,
     launchesStats,
+    starlinkStats,
 });

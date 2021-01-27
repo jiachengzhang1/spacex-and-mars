@@ -7,12 +7,12 @@ import {
     FaYoutube,
 } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import Histogram from "./AHistogram";
+import StarlinkChart from "./StarlinkChart";
+import LaunchChart from "./LaunchChart";
 
 const SpaceX = ({ className }) => {
     return (
         <div className={`spacex-img ${className}`}>
-            <Histogram />
             <p>
                 SpaceX designs, manufactures and launches advanced rockets and
                 spacecraft. The company was founded in 2002 to revolutionize
@@ -37,18 +37,12 @@ const SpaceX = ({ className }) => {
                 <div className="carousel-inner mb-3">
                     <div className="carousel-item active" data-interval="10000">
                         <div className="">
-                            <h3>LAUNCH STATISTICS</h3>
-                            <Histogram />
+                            <LaunchChart />
                         </div>
                     </div>
                     <div className="carousel-item" data-interval="10000">
                         <div className="">
-                            <h3>STARLINK STATISTICS</h3>
-                        </div>
-                    </div>
-                    <div className="carousel-item" data-interval="10000">
-                        <div className="">
-                            <h3>ROCKET STATISTICS</h3>
+                            <StarlinkChart />
                         </div>
                     </div>
                 </div>

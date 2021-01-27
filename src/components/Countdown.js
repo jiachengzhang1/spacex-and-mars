@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import CountdownDigit from "./CountdownDigit";
 
-const Countdown = ({ date }) => {
+const Countdown = ({ date, goal }) => {
     const [remainTime, setRemainTime] = useState(getRemainTime(date));
     useEffect(() => {
         const timer = setInterval(() => {
@@ -19,7 +19,7 @@ const Countdown = ({ date }) => {
             <CountdownDigit digit={hours} unit="HOURS" />
             <CountdownDigit digit={minuties} unit="MINS" />
             <CountdownDigit digit={seconds} unit="SECS" />
-            <CountdownDigit digit="UNTILL" unit="LAUNCH" />
+            <CountdownDigit digit="UNTILL" unit={goal.toUpperCase()} />
         </div>
     );
 };
