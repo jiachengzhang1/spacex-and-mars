@@ -11,9 +11,9 @@ const Header = () => {
     return (
         <header>
             <nav className="navbar navbar-expand-lg fixed-top">
-                <a className="navbar-brand mr-5" href="#">
+                <Link className="navbar-brand mr-5" to="/">
                     SPACEX AND MARS
-                </a>
+                </Link>
                 <button
                     className="navbar-toggler"
                     type="button"
