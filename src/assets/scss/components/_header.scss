@@ -3,10 +3,17 @@
     a {
         color: rgb(202, 202, 202);
         text-decoration: none;
+        font-size: 18px;
 
         &:hover {
             color: white;
         }
+    }
+
+    .navbar-brand {
+        color: white;
+        font-weight: 600;
+        font-size: 24px;
     }
 
     .bars-icon {
