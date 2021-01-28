@@ -1,5 +1,5 @@
 <h1 align="center">SpaceX and Mars 🚀</h1>
-<h3 align="center">Check out this SpaceX missions and Mars weather website at 
+<h3 align="center">Check out this SpaceX achievements and events about Mars website at 
   <a href="https://www.spacexandmars.com">
     SpaceX and Mars
   </a>🚀🚀🚀
