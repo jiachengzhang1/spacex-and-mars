@@ -44,9 +44,24 @@ const News = () => {
                     <div className="news-sidebar">
                         <h2>MORE SPACE NEWS</h2>
                         <hr />
-                        <p>NASASpaceflight</p>
-                        <p>Spaceflight Now</p>
-                        <p>NASA</p>
+                        <p>
+                            <a href="https://www.nasaspaceflight.com">
+                                NASASpaceflight
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://spaceflightnow.com">
+                                Spaceflight Now
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://www.nasa.gov/news/releases/latest/index.html">
+                                NASA
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://www.space.com">Space.com</a>
+                        </p>
                     </div>
                 </div>
             </div>

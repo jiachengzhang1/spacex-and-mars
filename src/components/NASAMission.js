@@ -8,26 +8,18 @@ const NASAMission = () => {
             <h2>NASA MARS 2020 MISSION</h2>
             <div className="intro row">
                 <div className="col-md">
-                    <div className="countdown-card">
-                        <h3>Countdown</h3>
-                        <Countdown
-                            date={new Date("Thu Feb 18 2021 12:55:00 GMT-0800")}
-                            goal="LANDING"
-                        />
-                        <AddToCalendarButton
-                            dateUtc="Thu Feb 18 2021 12:55:00 GMT-0800"
-                            description="Seek signs of ancient life and collect samples of rock and regolith (broken rock and soil) for possible return to Earth."
-                            title="NASA Mars 2020 Mission"
-                        />
-                        <p>
-                            <a href="https://mars.nasa.gov/mars2020/timeline/landing/watch-online/">
-                                UPCOMING EVENTS
-                            </a>
-                        </p>
-                    </div>
+                    <iframe
+                        className="embed-responsive embed-responsive-16by9"
+                        // width="560"
+                        height="350"
+                        src="https://www.youtube.com/embed/tITni_HY1Bk?autoplay=1&cc_load_policy=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
                 </div>
                 <div className="col-md">
-                    <h3>QUICK FACTS</h3>
+                    <h3>QUICK OVERVIEW</h3>
                     <div className="row">
                         <div className="col">
                             <h5>Launch</h5>
@@ -52,22 +44,27 @@ const NASAMission = () => {
                             NASA Mars 2020 Mission
                         </a>
                     </p>
+                    <div className="countdown-card">
+                        <Countdown
+                            date={new Date("Thu Feb 18 2021 12:55:00 GMT-0800")}
+                            goal="LANDING"
+                        />
+                        <div className="nasa-mission-schedule-buttons">
+                            <a href="https://mars.nasa.gov/mars2020/timeline/landing/watch-online/">
+                                UPCOMING EVENTS
+                            </a>
+                            <AddToCalendarButton
+                                dateUtc="Thu Feb 18 2021 12:55:00 GMT-0800"
+                                description="Seek signs of ancient life and collect samples of rock and regolith (broken rock and soil) for possible return to Earth."
+                                title="NASA Mars 2020 Mission"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
+            <hr />
             <div className="landing-demo">
-                <h3>LANDING DEMO</h3>
                 <div className="row">
-                    <div className="col-lg">
-                        <iframe
-                            className="embed-responsive embed-responsive-16by9"
-                            // width="560"
-                            height="350"
-                            src="https://www.youtube.com/embed/tITni_HY1Bk?autoplay=1&cc_load_policy=1"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
                     <div className="col-lg">
                         <h3>
                             Perseverance Rover{" "}
@@ -91,6 +88,8 @@ const NASAMission = () => {
                                 wikipedia
                             </a>
                         </p>
+                    </div>
+                    <div className="col-lg">
                         <h3>
                             Ingenuity Helicopter{" "}
                             <span>

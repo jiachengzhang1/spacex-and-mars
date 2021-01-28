@@ -29,6 +29,9 @@ const SpaceX = ({ className }) => {
                 </span>
                 <span>Gwynne Shotwell</span>
             </p>
+            <h4>
+                <b>STATISTICS</b>
+            </h4>
             <div
                 id="carouselExampleControls"
                 className="carousel slide"

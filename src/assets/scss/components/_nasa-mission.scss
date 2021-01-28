@@ -2,7 +2,7 @@
     a {
         color: rgb(0, 17, 255);
     }
-    border-top: rgb(223, 215, 215) 1px solid;
+    // border-top: rgb(223, 215, 215) 1px solid;
     border-bottom: rgb(223, 215, 215) 1px solid;
     padding: 20px 0px;
 
@@ -11,22 +11,28 @@
     }
 
     .countdown {
-        margin-top: 25px;
+        // margin-top: 25px;
         margin-bottom: 25px;
     }
 
     .countdown-card {
-        border: 1px solid black;
-        text-align: center;
-        button {
-            // float: right;
-            // margin-right: 50px;
-        }
+        // border: 1px solid black;
+        // padding-bottom: 10px;
+        // text-align: center;
 
-        a {
-            // float: right;
-            // margin-left: 32px;
+        .nasa-mission-schedule-buttons {
+            display: flex;
+            justify-content: space-evenly;
         }
+        // button {
+        //     float: right;
+        //     margin-right: 50px;
+        // }
+
+        // a {
+        //     float: right;
+        //     margin-left: 52px;
+        // }
     }
 
     .landing-demo {

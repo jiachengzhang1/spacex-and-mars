@@ -27,7 +27,7 @@ const Card = ({ newsDetail }) => {
                         </a>
                     </p>
                 </div>
-                <div className="col-md-4 news-image">
+                <div className="col-md news-image">
                     <img
                         src={imageUrl}
                         className="img-fluid"
