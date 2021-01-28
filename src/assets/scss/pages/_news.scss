@@ -1,0 +1,40 @@
+.news {
+    .news-card:last-child {
+        margin-bottom: 20px;
+    }
+
+    .news-content {
+        h2 {
+            a {
+                color: black;
+                font-weight: 600;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .news-date span {
+        color: rgb(117, 117, 117);
+    }
+
+    .news-caption {
+        color: rgb(117, 117, 117);
+
+        a {
+            color: rgb(117, 117, 117);
+        }
+    }
+
+    .news-sidebar {
+        border-left: rgb(223, 215, 215) 1px solid;
+        padding-left: 22px;
+
+        a {
+            color: black;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,50 +1,62 @@
 import React from "react";
-import { Table as TB } from "react-bootstrap";
 
-const constructHeaderHTML = (headers) => {
-  return headers.map((header, i) => <th key={i}>{header}</th>);
+const Table = ({ launches }) => {
+    const launchTableRows = launches.map(
+        ({
+            id,
+            flight_number,
+            launchpad,
+            name,
+            rocket,
+            success,
+            upcomming,
+            date_utc,
+        }) => {
+            const { name: rocketName } = rocket;
+            const { full_name } = launchpad;
+            return (
+                <tr key={id}>
+                    <td>{flight_number}</td>
+                    <td>{name}</td>
+                    <td>{getStatus(upcomming, success)}</td>
+                    <td>{rocketName}</td>
+                    <td>{full_name}</td>
+                    <td>{getDateString(date_utc)}</td>
+                </tr>
+            );
+        }
+    );
+
+    return (
+        <table>
+            <thead>
+                <tr>
+                    <th>FLIGHT #</th>
+                    <th>NAME</th>
+                    <th>OUTCOME</th>
+                    <th>ROCKET</th>
+                    <th>PAD</th>
+                    <th>DATE</th>
+                </tr>
+            </thead>
+            <tbody>{launchTableRows}</tbody>
+        </table>
+    );
 };
 
-const constructBodyHTML = (rows, body) => {
-  if (body !== null) {
-    return body;
-  }
-  return rows.map((datas, i) => {
-    return (
-      <tr key={i}>
-        {datas.map((data, i) => (
-          <td key={i}>{data}</td>
-        ))}
-      </tr>
-    );
-  });
-};
-
-export default function Table({
-  headers,
-  rows,
-  body = null,
-  bootstrap = true,
-  className,
-}) {
-  if (bootstrap) {
-    return (
-      <TB className={className} responsive="xl" bordered={false}>
-        <thead style={{ color: "white" }}>
-          <tr>{constructHeaderHTML(headers)}</tr>
-        </thead>
-        <tbody style={{ color: "white" }}>
-          {constructBodyHTML(rows, body)}
-        </tbody>
-      </TB>
-    );
-  }
-  return (
-    <table className={className}>
-      <thead>
-        <tr>{constructHeaderHTML(headers)}</tr>
-      </thead>
-      <tbody>{constructBodyHTML(rows, body)}</tbody>
-    </table>
-  );
+function getStatus(upcomming, success) {
+    if (upcomming) {
+        return "Upcomming";
+    }
+    if (success !== null) {
+        return success ? "Success" : "Failed";
+    }
+    return "Unknown";
 }
+
+function getDateString(date) {
+    const d = new Date(date).toDateString().split(" ");
+    return `${d[1]}. ${d[2]} ${d[3]}`;
+}
+
+export default Table;

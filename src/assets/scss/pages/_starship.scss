@@ -1,0 +1,35 @@
+.starship {
+    padding: 0;
+    margin: 35px 0px;
+
+    // .test111 {
+    //     border: 1px solid rgb(210, 210, 210);
+    //     padding: 15px;
+    //     height: fit-content;
+    // }
+
+    table {
+        margin-bottom: 20px;
+        padding: 0;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+
+        td,
+        th {
+            border-bottom: 1px solid rgb(210, 210, 210);
+            padding: 0px 8px;
+        }
+
+        td {
+            max-width: 200px;
+        }
+
+        caption {
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+}

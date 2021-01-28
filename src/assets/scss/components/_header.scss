@@ -1,0 +1,31 @@
+.navbar {
+    background-color: black;
+    a {
+        color: rgb(202, 202, 202);
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .bars-icon {
+        vertical-align: middle;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .dropdown-menu {
+        background-color: black;
+    }
+
+    .dropdown-menu a {
+        color: rgb(202, 202, 202);
+        text-decoration: none;
+    }
+
+    .dropdown-item:hover {
+        background-color: black;
+        color: white;
+    }
+}

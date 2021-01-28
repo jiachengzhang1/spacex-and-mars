@@ -11,10 +11,6 @@
 # production
 /build
 
-# gatsby
-/public
-.cache
-
 # autobot
 /log
 /tmp
